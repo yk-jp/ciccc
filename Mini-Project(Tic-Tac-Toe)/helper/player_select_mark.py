@@ -1,3 +1,5 @@
+from config.config import player_input_constraint
+
 def player_select_mark(curr_player, player_mark_list):
     player_input = -1
     try:
