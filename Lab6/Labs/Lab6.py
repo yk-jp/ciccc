@@ -19,13 +19,17 @@ def gcd(a, b):
     # remainder
     r = 0
 
-    # until a mod b equals 0
-    while (a % b) > 0:
-      r = a % b
-      a = b
-      b = r    
+    # until a mod b(remainder) equals 0
+    # b1 = a1 * q1 + r1
+    # a1 = r1 * q2 + r2
+    # r1 = r2 * q3 + r3
+
+    while (b % a) > 0:
+      r = b % a
+      b = a
+      a = r
     
-    return b 
+    return a  #previous number when r becomes 0 is the largest number
 
 
 def lcm(a, b):
